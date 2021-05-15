@@ -1,0 +1,23 @@
+﻿  Tabajara.cpp
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(23,54): warning C4305: 'argumento': truncamento de 'int' para 'char'
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(23,41): warning C4309: 'argumento': truncamento de valor constante
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(24,56): warning C4305: 'argumento': truncamento de 'int' para 'char'
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(24,43): warning C4309: 'argumento': truncamento de valor constante
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(25,53): warning C4305: 'argumento': truncamento de 'int' para 'char'
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(25,41): warning C4309: 'argumento': truncamento de valor constante
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(26,48): warning C4305: 'argumento': truncamento de 'int' para 'char'
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(26,36): warning C4309: 'argumento': truncamento de valor constante
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(34,10): warning C4930: 'Cliente cliente(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(110,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(180,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(248,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(315,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(382,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(449,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(518,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(585,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(652,15): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(719,16): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Tabajara\Tabajara.cpp(755,14): warning C4930: 'Cliente Cadastro(void)': função prototipada não chamada (uma definição de variável era pretendida?)
+  LINK : C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Debug\Tabajara.exe não encontrado ou não compilado pelo o último link incremental; executando link completo
+  Tabajara.vcxproj -> C:\Users\luiza\Documents\GitHub\prog2cpp\Tabajara\Debug\Tabajara.exe
