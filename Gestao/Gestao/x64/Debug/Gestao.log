@@ -1,0 +1,9 @@
+﻿  Gestao.cpp
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(47,8): warning C4101: 'totaldiv': variável local não referenciada
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(782,10): error C2065: 'numf': identificador não declarado
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(782,29): error C2065: 'nometemp': identificador não declarado
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(782,49): error C2065: 'credtemp': identificador não declarado
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(782,72): error C2065: 'divtemp': identificador não declarado
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(782,94): error C2065: 'saldo': identificador não declarado
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(873,15): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\luiza\Documents\GitHub\prog2cpp\Gestao\Gestao\Gestao.cpp(878,23): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
