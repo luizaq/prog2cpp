@@ -13,9 +13,10 @@ float Operario::calculaSalOP(float comissao, float valorProducao,float salBase)
 
 float Operario::salAleatorio()
 {
+	float salBase;
 	float salt;
 	salt = rand() % 5000 + 1000;
-	salt = salBase;
+	salBase = salt;
 	return salBase;
 }
 float Operario::comiAleatorio()

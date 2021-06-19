@@ -17,8 +17,8 @@ int contadorCadastroAdm, contadorCadastroVend, contadorCadastroOP, contadorCadas
 bool cadastrou = false;
 bool cadastrouFor = false;
 
-string listaNomesAdm[20]{ "Maria", "José", "Antônia"," Canadá"
-, "Paraná", "França", "Goiás", "Diamantina", "Florianópolis", "Brasil", "Pedro", "Neymar",
+string listaNomesAdm[20]{ "Maria", "Jose", "Antonia"," Canadá"
+, "Parana", "França", "Goiás", "Diamantina", "Florianópolis", "Brasil", "Pedro", "Neymar",
 	"Ronaldo"," Suécia", "Curitiba"," Chile", "Vitória", "Paloma"
 	, "Luiz", "Larissa"
 };
@@ -44,6 +44,7 @@ int main()
 	criaFuncsAdms();
 	CriaVendedores();
 	CriaOperarios();
+	CriaFornecedores();
 
 	float totaldiv;
 
@@ -61,10 +62,13 @@ int main()
 	{
 	case 1:
 		MenuFornecedores();
+		break;
 	case 2:
 		MenuFunc();
+		break;
 	case 3:
 		MenuRel();
+		break;
 
 	default:
 		cout << "opcao invalida";
@@ -87,13 +91,17 @@ void MenuRel()
 	switch (op)
 	{
 	case 1:
-		//AmostraGaleraToda();
+		AmostraGaleraToda();
+		break;
 	case 2:
-		//AmostraFornecedores();
+		AmostraFornecedores();
+		break;
 	case 3:
 		RelEmp();
+		break;
 	case 4:
 		main();
+		break;
 	default:
 		break;
 	}
@@ -113,14 +121,19 @@ void RelEmp()
 	{
 	case 1:
 		AmostraTodosEm();
+		break;
 	case 2:
 		AmostraAdm();
+		break;
 	case 3:
 		AmostraVend();
+		break;
 	case 4:
 		AmostraOp();
+		break;
 	case 5:
 		MenuRel();
+		break;
 	default:
 		break;
 	}
@@ -140,14 +153,38 @@ void MenuFunc()
 	cout << "3-Cadastrar novo funcionário\n";
 	cout << "4-Buscar funcionarios\n";
 	cin >> op;
-
+	int cod;
 	switch (op)
 	{
 	case 1:
+		AmostraTodosEm();
+		break;
 	case 2:
 		cadastrou = true;
+		cout << "Insira o cod de setor|1adm.2vendas|3operario\n";
+		cin >> cod;
+		switch (cod)
+		{
+		case 1:
+			AmostraAdm();
+			break;
+		case 2:
+			AmostraVend();
+			break;
+		case 3:
+			AmostraOp();
+			break;
+
+		default:
+			break;
+		}
+		break;
 	case 3:
+		cadastrou = true;
+		VerificaCad();
+		break;
 	case 4:
+		break;
 
 	default:
 		cout << "Opcao invalida\n";
@@ -170,10 +207,13 @@ void VerificaCad()
 	{
 	case 1:
 		cadastraADM();
+		break;
 	case 2:
 		cadastraVend();
+		break;
 	case 3:
 		cadastraOp();
+		break;
 	default:
 		break;
 	}
@@ -181,15 +221,17 @@ void VerificaCad()
 }
 void AmostraTodosEm()
 {
-	
+
 	AmostraAdm();
 	AmostraOp();
 	AmostraVend();
 }
 void AmostraGaleraToda()
 {
+	string a;
 	AmostraTodosEm();
 	AmostraFornecedores();
+	cin >> a;
 }
 void AmostraAdm()
 {
@@ -210,7 +252,7 @@ void AmostraAdm()
 			<< administradores[i].getsalBase() << "|" << "     "
 			<< administradores[i].getImposto() << "|" << "     "
 			<< administradores[i].getAjdc() << "|" << "     "
-			<< administradores[i].getsalTotal() << "|" << "     " << "/n";
+			<< administradores[i].getsalTotal() << "|" << "     " << "\n";
 
 
 	}
@@ -226,7 +268,7 @@ void AmostraVend()
 	//inicialmente 6 para todso , se o cadastra rodou roda 20
 	for (int i = 0; i < x; i++)
 	{
-		
+
 		cout << vendedores[i].getcodSetor() << "--->" << "     "
 			<< vendedores[i].GetNome() << "|" << "     "
 			<< vendedores[i].GetEnd() << "|" << "     "
@@ -235,7 +277,7 @@ void AmostraVend()
 			<< vendedores[i].getImposto() << "|" << "     "
 			<< vendedores[i].getComissao() << "|" << "     "
 			<< vendedores[i].getValorVendas() << "|" << "     "
-			<< vendedores[i].getsalTotal() << "|" << "     " << "/n";
+			<< vendedores[i].getsalTotal() << "|" << "     " << "\n";
 
 
 	}
@@ -260,7 +302,7 @@ void AmostraOp()
 			<< operarios[i].getImposto() << "|" << "     "
 			<< operarios[i].getComissao() << "|" << "     "
 			<< operarios[i].getValorProd() << "|" << "     "
-			<< operarios[i].getsalTotal() << "|" << "     " << "/n";
+			<< operarios[i].getsalTotal() << "|" << "     " << "\n";
 
 
 	}
@@ -272,7 +314,7 @@ void AmostraFornecedores()
 	{
 		x += contadorCadastroFor;
 	}
-	
+
 	for (int i = 0; i < x; i++)
 	{
 		cout << i << "   --" << fornecedores[i].GetNome()
@@ -581,6 +623,7 @@ void criaFuncsAdms()
 	string nome;
 	for (int x = 0; x < 6; x++)
 	{
+
 		base = adm.salAleatorio();
 		administradores[x].SetNome(NomeADMAleatorio());
 		administradores[x].SetEnd(EndAleatorio());
@@ -681,10 +724,13 @@ void destino(int codsetor)
 				<< "     " << "Sal Base" << "     " << "Imposto" << "     " << "Comissao %"
 				<< "     " << "Ajuda de custo" << "     " << "Sal Total\n";
 			AmostraAdm();
+			break;
 		case 2:
 			removeAdm();
+			break;
 		case 3:
 			MenuFunc();
+			break;
 		default:
 			cout << "inválido\n";
 			break;
@@ -706,10 +752,13 @@ void destino(int codsetor)
 				<< "     " << "Sal Base" << "     " << "Imposto" << "     " << "Comissao %"
 				<< "     " << "Valor Vendas" << "     " << "Sal Total\n";
 			AmostraVend();
+			break;
 		case 2:
 			removeVend();
+			break;
 		case 3:
 			MenuFunc();
+			break;
 		default:
 			cout << "inválido\n";
 			break;
@@ -731,10 +780,15 @@ void destino(int codsetor)
 				<< "     " << "Sal Base" << "     " << "Imposto" << "     " << "Comissao %"
 				<< "     " << "Valor Producao" << "     " << "Sal Total\n";
 			AmostraOp();
+			break;
 		case 2:
 			removeOp();
+			break;
 		case 3:
 			MenuFunc();
+			break;
+
+
 		default:
 			cout << "inválido\n";
 			break;
@@ -755,10 +809,13 @@ void destino(int codsetor)
 		case 1:
 			cout << "id" << "       " << "nome" << "      " << "Credito" << "      " << "Saldo devedor " << " total    \n ";
 			AmostraFornecedores();
+			break;
 		case 2:
 			removeForn();
+			break;
 		case 3:
 			MenuFunc();
+			break;
 		default:
 			cout << "inválido\n";
 			break;
@@ -863,7 +920,7 @@ void CriaOperarios()
 void MenuFornecedores()
 {
 	int op;
-	
+
 	system("cls");
 	cout << "***Menu Funcionarios***\n";
 	cout << "1-Ver os fornecedores da empresa:\n";
@@ -875,12 +932,15 @@ void MenuFornecedores()
 	{
 	case 1:
 		AmostraFornecedores();
+		break;
 	case 2:
 		cadastrou = true;
 		CadastraFornecedores();
+		break;
 	case 3:
 		BuscaFornecedores();
-	
+		break;
+
 	default:
 		cout << "Opcao invalida\n";
 		break;
@@ -888,7 +948,7 @@ void MenuFornecedores()
 }
 void BuscaFornecedores()
 {
-	string nomes,nome;
+	string nomes, nome;
 	cout << "Busca de fornecedores\n";
 	cout << "Digite o nome do fornecedor\n";
 	cin >> nome;
@@ -908,13 +968,13 @@ void BuscaFornecedores()
 string NomeADMAleatorio()
 {
 	int ale;
-
+	string nome;
 	ale = rand() % 20;
-	for (int i = 0; i > 20; i++)
+	for (int i = 0; i < 20; i++)
 	{
 		if (i == ale)
 		{
-			listaNomesAdm[i] = nome;
+			nome = listaNomesAdm[i];
 			break;
 		}
 	}
@@ -924,13 +984,13 @@ string NomeADMAleatorio()
 string NomeVendedorAleatorio()
 {
 	int ale;
-
+	string nome;
 	ale = rand() % 20;
-	for (int i = 0; i > 20; i++)
+	for (int i = 0; i < 20; i++)
 	{
 		if (i == ale)
 		{
-			listaNomesVendedores[i] = nome;
+			nome = listaNomesVendedores[i];
 			break;
 		}
 	}
@@ -940,13 +1000,13 @@ string EndAleatorio()
 {
 
 	int ale;
-
+	string ende;
 	ale = rand() % 6;
 	for (int i = 0; i > 6; i++)
 	{
 		if (i == ale)
 		{
-			listaEnderecos[i] = ende;
+			ende = listaEnderecos[i];
 			break;
 		}
 	}
@@ -957,33 +1017,34 @@ string telAleatorio()
 
 	int ale;
 	//base
+	string tele1, tele2, tele3;
 	ale = rand() % 6;
-	for (int i = 0; i > 6; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		if (i == ale)
 		{
-			baseTel[i] = tele1;
+			tele1 = baseTel[i];
 			break;
 		}
 	}
 	//meio
 
 	ale = rand() % 6;
-	for (int i = 0; i > 6; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		if (i == ale)
 		{
-			meioTel[i] = tele2;
+			tele2 = meioTel[i];
 			break;
 		}
 	}
 	//fim
 	ale = rand() % 6;
-	for (int i = 0; i > 6; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		if (i == ale)
 		{
-			fimTel[i] = tele3;
+			tele3 = fimTel[i];
 			break;
 		}
 	}

@@ -10,9 +10,10 @@ float Vendedor::CalculaVendedor(float comissao, float valorVendas,float salBase)
 }
 float Vendedor::salAleatorio()
 {
+	float salBase;
 	float salt;
 	salt = rand() % 5000 + 1000;
-	salt = salBase;
+	salBase = salt;
 	return salBase;
 }
 float Vendedor::comiAleatorio()
